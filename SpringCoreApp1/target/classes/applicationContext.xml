@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="car" class="co.edureka.Car">
+		<property name="name" value="Renault Duster"></property>
+		<property name="perDayCost" value="10000"></property>
+	</bean>
+	<bean id="user" class="co.edureka.User">
+		<property name="car" ref="car"></property>
+	</bean> -->
+	
+	
+	<bean id="l" class="com.tcs.SpringCoreApp1.Loan" init-method="start" destroy-method="stop" scope="prototype">
+	
+	   <property name="loanId" value="102"/>
+	   <property name="name" value="AXIS"/>
+	   <property name="amount" value="800000.00"/>
+	   <property name="customer">
+	   
+	      <bean id="customer" class="com.tcs.SpringCoreApp1.Customer">
+	         <property name="id" value="12"/>
+	         <property name="name" value="TCScustomer2"/>
+	  
+	      </bean>
+	   
+	   </property>
+	   
+	</bean>
+	
+	<bean id="ap" class="com.tcs.SpringCoreApp1.Account">
+	
+	<constructor-arg index="0"  value="4567"/>
+	<constructor-arg index="1"  value="Chennai"/>
+	
+	</bean>
+	
+	
+	
+	
+	
+</beans>
